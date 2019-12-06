@@ -1,15 +1,16 @@
-var room
+//I need a global variable that will store the total number of guests.
+var room1total = 0;
+var room2total = 0;
 
 
-
-
-//Room 1
+//////////////// START Room 1 /////////////////////////////////
 function checkIn() {
-    var roomone = document.getElementsByTagName('li');
-    if (roomone.length > 4) {
+
+    if (room1total > 4) {  //I am going to check if the room has more than 4 guests
         alert("room is full");
     }
     else {
+        room1total++;
         var x = new Date();
         var r = x.toLocaleString();
         var newList = document.createElement('li');
@@ -24,6 +25,7 @@ function checkIn() {
 }
 
 function removeMe() {
+    room1total =-1;
     var personNum = document.getElementById("remNum").value;
    var x = parseInt(personNum);
     var getChild = document.getElementsByTagName('li')[x - 1];
@@ -46,13 +48,15 @@ function vtest(){
     }
 }
 
-//room 2///
+//////////////// END Room 1 /////////////////////////////////
+
+//////////////// START Room 2 /////////////////////////////////
 function checkInTwo() {
-    var roomTwo = document.getElementsByTagName('li');
-    if (roomTwo.length > 4) {
+    if (room2total > 4) {
         alert("room is full");
     }
     else {
+        room2total++; //I am going to add +1 to the room2total variable
         var x = new Date();
         var r = x.toLocaleString();
         var newList = document.createElement('li');
@@ -67,6 +71,7 @@ function checkInTwo() {
 }
 
 function removeMeTwo() {
+    room2total=-1; //I will -1 from the room2total variable
     var personNum = document.getElementById("remNumTwo").value;
    var x = parseInt(personNum);
     var getChild = document.getElementsByTagName('li')[x - 1];
@@ -86,6 +91,8 @@ function vtestTwo(){
         onoff = true;
     }
 }
+//////////////// END Room 2 /////////////////////////////////
+
 
 //////room 3////
 function checkInThree() {
