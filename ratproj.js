@@ -3,6 +3,7 @@ var room1total = 0;
 var room2total = 0;
 
 
+
 //////////////// START Room 1 /////////////////////////////////
 function checkIn() {
 
@@ -34,7 +35,7 @@ function removeMe() {
    document.getElementById('remNum').value = " ";
    }
    function clear() {
-  
+  //this does not work
 }
 var onoff=true;
 function vtest(){
